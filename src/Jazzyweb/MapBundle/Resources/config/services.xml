@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+
+    <parameters>
+        <parameter key="jw_map.builder.class">Jazzyweb\MapBundle\GoogleMapBuilder</parameter>
+        <parameter key="jw_map.marker_manager.class">Jazzyweb\MapBundle\YAMLMarkerManager</parameter>
+    </parameters>
+
+    <services>
+        <service id="jw_map.builder" class="%jw_map.builder.class%">
+            <argument type="service" id="ivory_google_map.map.builder"></argument>
+            <argument type="service" id="ivory_google_map.marker.builder"></argument>
+            <argument type="service" id="ivory_google_map.info_window.builder"></argument>
+        </service>
+
+        <service id="jw_map.marker_manager" class="%jw_map.marker_manager.class%">
+            <argument>%kernel.root_dir%/config/markers.yml</argument>
+            <!--<argument type="service" id="doctrine.orm.entity_manager"></argument>-->
+        </service>
+
+
+    </services>
+
+</container>

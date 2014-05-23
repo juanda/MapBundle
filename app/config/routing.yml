@@ -1,0 +1,4 @@
+jw_map:
+    resource: "@JwMapBundle/Resources/config/routing.xml"
+    prefix:   /
+
