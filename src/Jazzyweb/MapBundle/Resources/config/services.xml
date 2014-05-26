@@ -7,7 +7,8 @@
 
     <parameters>
         <parameter key="jw_map.builder.class">Jazzyweb\MapBundle\GoogleMapBuilder</parameter>
-        <parameter key="jw_map.marker_manager.class">Jazzyweb\MapBundle\YAMLMarkerManager</parameter>
+        <parameter key="jw_map.yaml_marker_manager.class">Jazzyweb\MapBundle\YAMLMarkerManager</parameter>
+        <parameter key="jw_map.doctrine_marker_manager.class">Jazzyweb\MapBundle\DoctrineMarkerManager</parameter>
     </parameters>
 
     <services>
@@ -17,9 +18,14 @@
             <argument type="service" id="ivory_google_map.info_window.builder"></argument>
         </service>
 
-        <service id="jw_map.marker_manager" class="%jw_map.marker_manager.class%">
+        <!--
+        <service id="jw_map.yaml_marker_manager" class="%jw_map.marker_manager.class%">
             <argument>%kernel.root_dir%/config/markers.yml</argument>
-            <!--<argument type="service" id="doctrine.orm.entity_manager"></argument>-->
+        </service>
+        -->
+
+        <service id="jw_map.doctrine_marker_manager" class="%jw_map.doctrine_marker_manager.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
         </service>
 
 

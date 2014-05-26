@@ -8,7 +8,7 @@ class MapController extends Controller
 {
     public function indexAction($agrupacion, $nombre)
     {
-        $markerManager = $this->get('jw_map.marker_manager');
+        $markerManager = $this->get('jw_map.doctrine_marker_manager');
 
         switch($agrupacion){
             case 'provincia':

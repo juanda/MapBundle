@@ -41,17 +41,13 @@ class AddressToLonLat{
 
         $result = json_decode($result);
 
-
+        $this->status = $result->status;
         if($result->status == "OK"){
-            $this->status="COMPUTED";
             $this->lon = $result->results[0]->geometry->location->lng;
             $this->lat = $result->results[0]->geometry->location->lat;
             return true;
         }else{
-
-            $this->status = "FAIL";
             return false;
         }
-
     }
 }

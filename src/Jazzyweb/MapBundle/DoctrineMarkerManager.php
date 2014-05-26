@@ -2,33 +2,43 @@
 
 namespace Jazzyweb\MapBundle;
 
+use Doctrine\ORM\EntityManagerInterface;
+
 class DoctrineMarkerManager implements  MarkerManagerInterface {
 
-    public function __construct(){
+    private $em;
+    private $repoCentros;
 
+    public function __construct(EntityManagerInterface $em){
+        $this->em = $em;
+        $this->repoCentros = $this->em->getRepository('JwMapBundle:CentroMarker');
     }
 
     public function getAll()
     {
-        echo "all";exit;
-        // TODO: Implement getAll() method.
+        $centros = $this->repoCentros->findAll();
+
+        return $centros;
     }
 
     public function getAllByProvincia($provincia)
     {
-        echo "provincia";exit;
-        // TODO: Implement getAllByProvincia() method.
+        $centros = $this->repoCentros->findPorProvincia($provincia);
+
+        return $centros;
     }
 
-    public function getAllByComunidad($comunidad)
+    public function getAllByAutonomia($autonomia)
     {
-        echo "comunidad";exit;
-        // TODO: Implement getAllByComunidad() method.
+        $centros = $this->repoCentros->findPorProvincia($autonomia);
+
+        return $centros;
     }
 
-    public function getAllByMunicipio($municipio)
+    public function getAllByLocalidad($localidad)
     {
-        echo "municipio";exit;
-        // TODO: Implement getAllByMunicipio() method.
+        $centros = $this->repoCentros->findPorLocalidad($localidad);
+
+        return $centros;
     }
 }

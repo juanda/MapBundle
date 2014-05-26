@@ -19,8 +19,17 @@
 
     <div class="container">
 
+
+
         <div class="starter-template">
             <h1>Red de historias de no se qué</h1>
+            {% if map.markersWithoutLonLat != 0 %}
+                <div class="alert alert-warning alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    <strong>Atención</strong> {{ map.markersWithoutLonLat }} centros sin coordenadas!
+                </div>
+
+            {% endif %}
 
             <div class="panel panel-default">
                 <div class="panel-body">

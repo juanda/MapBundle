@@ -23,6 +23,7 @@ class GoogleMapBuilder {
     public function build(array $jwMarkers){
 
         $map = $this->mapBuilder->build();
+        $map->markersWithoutLonLat = 0;
 
         foreach($jwMarkers as $m){
 
@@ -31,14 +32,19 @@ class GoogleMapBuilder {
             }
 
             $marker = $this->markerBuilder->build();
-            $marker->setPosition($m->getLat(), $m->getLon());
-            $infoWindow  = $this->infoWindowBuilder->build();
-            $infoWindow->setOpenEvent(MouseEvent::CLICK);
-            $infoWindow->setContent($m->getContent());
+            if(is_float($m->getLon()) && is_float($m->getLat())){
+                $marker->setPosition($m->getLat(), $m->getLon());
+                $infoWindow  = $this->infoWindowBuilder->build();
+                $infoWindow->setOpenEvent(MouseEvent::CLICK);
+                $infoWindow->setContent($m->getContent());
 
-            $marker->setInfoWindow($infoWindow);
+                $marker->setInfoWindow($infoWindow);
 
-            $map->addMarker($marker);
+                $map->addMarker($marker);
+            }else{
+                $map->markersWithoutLonLat ++;
+            }
+
 
         }
 

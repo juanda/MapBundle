@@ -43,12 +43,12 @@ class YAMLMarkerManager implements  MarkerManagerInterface {
         return $markerCollection;
     }
 
-    public function getAllByComunidad($comunidad)
+    public function getAllByAutonomia($autonomia)
     {
         $markers = $this->getMarkers();
         $markerCollection = array();
         foreach($markers as $m){
-            if(isset($m['provincia']) && $m['provincia'] == $comunidad){
+            if(isset($m['autonomia']) && $m['autonomia'] == $autonomia){
                 $marker = new BasicMarker($m['address'], $m['content']);
                 $markerCollection[] = $marker;
             }
@@ -56,12 +56,12 @@ class YAMLMarkerManager implements  MarkerManagerInterface {
         return $markerCollection;
     }
 
-    public function getAllByMunicipio($municipio)
+    public function getAllByLocalidad($localidad)
     {
         $markers = $this->getMarkers();
         $markerCollection = array();
         foreach($markers as $m){
-            if(isset($m['municipio']) && $m['municipio'] == $municipio){
+            if(isset($m['localidad']) && $m['localidad'] == $localidad){
                 $marker = new BasicMarker($m['address'], $m['content']);
                 $markerCollection[] = $marker;
             }
