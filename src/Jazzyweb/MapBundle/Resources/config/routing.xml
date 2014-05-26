@@ -4,9 +4,23 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
 
+    <route id="jw_map_provincias" pattern="/provincias">
+        <default key="_controller">JwMapBundle:Map:provincias</default>
+    </route>
+
+    <route id="jw_map_autonomias" pattern="/autonomias">
+        <default key="_controller">JwMapBundle:Map:autonomias</default>
+    </route>
+
+    <route id="jw_map_localidades" pattern="/localidades">
+        <default key="_controller">JwMapBundle:Map:localidades</default>
+    </route>
+
     <route id="jw_map_all" pattern="/{agrupacion}/{nombre}">
         <default key="agrupacion">false</default>
         <default key="nombre">false</default>
         <default key="_controller">JwMapBundle:Map:index</default>
+        <requirement key="nombre">.+</requirement>
     </route>
+
 </routes>

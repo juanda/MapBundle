@@ -60,9 +60,22 @@ class CSV2DatabaseCommand extends ContainerAwareCommand {
             if($i >= $from - 1){
 
                 $centro = new CentroMarker();
+                $centro->setCodigo($datos[0]);
+                $centro->setDenoGenerica($datos[1]);
+                $centro->setDenoEspecial($datos[2]);
+                $centro->setDomicilio($datos[3]);
+                $centro->setCpostal($datos[4]);
+                $centro->setLocalidad($datos[5]);
+                $centro->setProvincia($datos[6]);
+                $centro->setAutonomia($datos[7]);
+                $centro->setNaturaleza($datos[8]);
+                $centro->setTipoEducacion($datos[9]);
+                $centro->setNumAlumnos($datos[10]);
+                $centro->setTelefono($datos[11]);
+                $centro->setTipologiaMod18may($datos[12]);
 
                 if($computeLonLat){
-                    $address = $centro->getDomicilio() . " " . $centro->getLocalidad() . " " . $centro->getProvincia() . " spain";
+                    $address = $centro->getDomicilio() . " " . $centro->getLocalidad() . "/" . $centro->getProvincia(). " spain";
                     $a2c = new AddressToLonLat($address);
                     $centro->setLon($a2c->getLon()? $a2c->getLon() : null);
                     $centro->setLat($a2c->getLat()? $a2c->getLat() : null);
@@ -81,19 +94,6 @@ class CSV2DatabaseCommand extends ContainerAwareCommand {
                     }
                 }
 
-                $centro->setCodigo($datos[0]);
-                $centro->setDenoGenerica($datos[1]);
-                $centro->setDenoEspecial($datos[2]);
-                $centro->setDomicilio($datos[3]);
-                $centro->setCpostal($datos[4]);
-                $centro->setLocalidad($datos[5]);
-                $centro->setProvincia($datos[6]);
-                $centro->setAutonomia($datos[7]);
-                $centro->setNaturaleza($datos[8]);
-                $centro->setTipoEducacion($datos[9]);
-                $centro->setNumAlumnos($datos[10]);
-                $centro->setTelefono($datos[11]);
-                $centro->setTipologiaMod18may($datos[12]);
 
                 if($write){
                     $em->persist($centro);

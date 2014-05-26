@@ -23,30 +23,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AddressToLonLat.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Jazzyweb/Geo/AddressToLonLat.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="122" selection-start="308" selection-end="378" vertical-scroll-proportion="-5.375" vertical-offset="66" max-vertical-offset="870">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MapController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Jazzyweb/MapBundle/Controller/MapController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="8" selection-start="807" selection-end="807" vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="585">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GoogleMapBuilder.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Jazzyweb/MapBundle/GoogleMapBuilder.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="46" selection-start="1499" selection-end="1499" vertical-scroll-proportion="-23.75" vertical-offset="90" max-vertical-offset="870">
+            <state line="45" column="22" selection-start="1521" selection-end="1521" vertical-scroll-proportion="-20.375" vertical-offset="186" max-vertical-offset="1440">
               <folding>
-                <element signature="e#38#76#0" expanded="true" />
+                <element signature="e#49#102#0" expanded="true" />
+                <marker date="1401122481415" expanded="true" signature="1333:1404" placeholder="SELECT disti..centros..." />
+                <marker date="1401122481415" expanded="true" signature="2113:2184" placeholder="SELECT disti..centros..." />
+                <marker date="1401122481415" expanded="true" signature="2630:2701" placeholder="SELECT disti..centros..." />
               </folding>
             </state>
           </provider>
@@ -55,25 +40,34 @@
       <file leaf-file-name="index.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Jazzyweb/MapBundle/Resources/views/Default/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="23" selection-start="1175" selection-end="1175" vertical-scroll-proportion="-19.375" vertical-offset="0" max-vertical-offset="1215">
+            <state line="85" column="40" selection-start="2724" selection-end="2724" vertical-scroll-proportion="-25.0" vertical-offset="675" max-vertical-offset="1620">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="services.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Jazzyweb/MapBundle/Resources/config/services.xml">
+      <file leaf-file-name="base.html.twig" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="77" selection-start="1259" selection-end="1259" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+            <state line="12" column="108" selection-start="453" selection-end="553" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="390">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="YAMLMarkerManager.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Jazzyweb/MapBundle/YAMLMarkerManager.php">
+      <file leaf-file-name="input.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Jazzyweb/MapBundle/Resources/public/css/input.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="34" selection-start="1478" selection-end="1478" vertical-scroll-proportion="-25.375" vertical-offset="111" max-vertical-offset="1320">
+            <state line="42" column="23" selection-start="948" selection-end="948" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routing.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Jazzyweb/MapBundle/Resources/config/routing.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="36" selection-start="952" selection-end="952" vertical-scroll-proportion="0.43250328" vertical-offset="0" max-vertical-offset="763">
               <folding />
             </state>
           </provider>
@@ -82,7 +76,7 @@
       <file leaf-file-name="CentroMarkerRepository.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Jazzyweb/MapBundle/Entity/CentroMarkerRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="12" selection-start="229" selection-end="229" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="750">
+            <state line="14" column="48" selection-start="293" selection-end="321" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="750">
               <folding>
                 <marker date="1401102536216" expanded="true" signature="413:487" placeholder="SELECT c FRO..JwMapBundle..." />
                 <marker date="1401102536216" expanded="true" signature="729:803" placeholder="SELECT c FRO..JwMapBundle..." />
@@ -92,21 +86,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CentroMarker.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Jazzyweb/MapBundle/Entity/CentroMarker.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="202" column="84" selection-start="2782" selection-end="2782" vertical-scroll-proportion="-26.64" vertical-offset="1698" max-vertical-offset="7680">
-              <folding>
-                <element signature="e#45#77#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CSV2DatabaseCommand.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CSV2DatabaseCommand.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Jazzyweb/MapBundle/Command/CSV2DatabaseCommand.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="69" selection-start="4696" selection-end="4696" vertical-scroll-proportion="0.957204" vertical-offset="919" max-vertical-offset="1890">
+            <state line="77" column="127" selection-start="3364" selection-end="3364" vertical-scroll-proportion="-14.208333" vertical-offset="814" max-vertical-offset="1890">
               <folding>
                 <element signature="e#45#78#0" expanded="true" />
               </folding>
@@ -114,10 +97,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DoctrineMarkerManager.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Jazzyweb/MapBundle/DoctrineMarkerManager.php">
+      <file leaf-file-name="SelectProvinciaType.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Jazzyweb/MapBundle/Form/Type/SelectProvinciaType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="66" selection-start="922" selection-end="922" vertical-scroll-proportion="-24.375" vertical-offset="0" max-vertical-offset="735">
+            <state line="17" column="46" selection-start="528" selection-end="528" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="480">
+              <folding>
+                <element signature="e#48#88#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProvinciasList.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Jazzyweb/MapBundle/Form/ProvinciasList.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="164" column="5" selection-start="5119" selection-end="5119" vertical-scroll-proportion="-102.5" vertical-offset="0" max-vertical-offset="2595">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="services.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Jazzyweb/MapBundle/Resources/config/services.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="84" selection-start="1460" selection-end="1460" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
               <folding />
             </state>
           </provider>
@@ -149,7 +152,6 @@
         <option value="$PROJECT_DIR$/src/Jazzyweb/Geo/GoogleMapBuilder.php" />
         <option value="$PROJECT_DIR$/src/Jazzyweb/MapBundle/MarkerInterface.php" />
         <option value="$PROJECT_DIR$/src/Jazzyweb/MapBundle/Controller/DefaultController.php" />
-        <option value="$PROJECT_DIR$/src/Jazzyweb/MapBundle/Resources/config/routing.xml" />
         <option value="$PROJECT_DIR$/src/Jazzyweb/MapBundle/MarkerManager.php" />
         <option value="$PROJECT_DIR$/src/Jazzyweb/MapBundle/Entity/Marker.php" />
         <option value="$PROJECT_DIR$/app/config/markers.yml" />
@@ -158,26 +160,36 @@
         <option value="$PROJECT_DIR$/src/Jazzyweb/MapBundle/Entity/CentrosMarker.php" />
         <option value="$PROJECT_DIR$/src/Jazzyweb/MapBundle/Resources/config/doctrine/CentrosMarker.orm.xml" />
         <option value="$PROJECT_DIR$/src/Jazzyweb/MapBundle/Command/CSV2SqliteCommand.php" />
-        <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/src/Jazzyweb/Geo/AddressToLonLat.php" />
         <option value="$PROJECT_DIR$/src/Jazzyweb/MapBundle/MarkerManagerInterface.php" />
         <option value="$PROJECT_DIR$/src/Jazzyweb/MapBundle/DoctrineMarkerManager.php" />
         <option value="$PROJECT_DIR$/src/Jazzyweb/MapBundle/YAMLMarkerManager.php" />
-        <option value="$PROJECT_DIR$/src/Jazzyweb/MapBundle/Resources/config/services.xml" />
         <option value="$PROJECT_DIR$/src/Jazzyweb/MapBundle/Entity/CentroMarkerRepository.php" />
-        <option value="$PROJECT_DIR$/src/Jazzyweb/MapBundle/Controller/MapController.php" />
         <option value="$PROJECT_DIR$/src/Jazzyweb/MapBundle/GoogleMapBuilder.php" />
-        <option value="$PROJECT_DIR$/src/Jazzyweb/MapBundle/Resources/views/Default/index.html.twig" />
+        <option value="$PROJECT_DIR$/Vagrantfile" />
+        <option value="$PROJECT_DIR$/app/config/security.yml" />
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/src/Jazzyweb/MapBundle/Entity/CentroMarker.php" />
         <option value="$PROJECT_DIR$/src/Jazzyweb/MapBundle/Command/CSV2DatabaseCommand.php" />
+        <option value="$PROJECT_DIR$/src/Jazzyweb/MapBundle/Form/Type/AutocompleteProvinciaType.php" />
+        <option value="$PROJECT_DIR$/src/Jazzyweb/MapBundle/Form/DataTransformer/EntityToIdTransformer.php" />
+        <option value="$PROJECT_DIR$/src/Jazzyweb/MapBundle/Form/Type/EntityToIdTransformer.php" />
+        <option value="$PROJECT_DIR$/src/Jazzyweb/MapBundle/Form/Type/AutocompleteEntityType.php" />
+        <option value="$PROJECT_DIR$/src/Jazzyweb/MapBundle/Resources/config/services.xml" />
+        <option value="$PROJECT_DIR$/src/Jazzyweb/MapBundle/Form/ProvinciasList.php" />
+        <option value="$PROJECT_DIR$/src/Jazzyweb/MapBundle/Form/Type/SelectProvinciaType.php" />
+        <option value="$PROJECT_DIR$/src/Jazzyweb/MapBundle/Controller/MapController.php" />
+        <option value="$PROJECT_DIR$/src/Jazzyweb/MapBundle/Resources/public/css/input.css" />
+        <option value="$PROJECT_DIR$/src/Jazzyweb/MapBundle/Resources/views/Default/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Jazzyweb/MapBundle/Resources/config/routing.xml" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="205" />
-    <option name="y" value="197" />
+    <option name="y" value="225" />
     <option name="width" value="1597" />
     <option name="height" value="969" />
   </component>
@@ -340,7 +352,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -373,8 +389,60 @@
               <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="doctrine" />
+              <option name="myItemId" value="FibraMap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FibraMap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Jazzyweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MapBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Form" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FibraMap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FibraMap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Jazzyweb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MapBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Form" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Type" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -473,10 +541,6 @@
               <option name="myItemId" value="Jazzyweb" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Geo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -538,7 +602,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../jazzy-mediadownloader" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="false" />
     <property name="options.lastSelected" value="Errors" />
@@ -553,6 +617,7 @@
       <recent name="$PROJECT_DIR$/src/Jazzyweb" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Jazzyweb/MapBundle/Form/Type" />
       <recent name="$PROJECT_DIR$/src/Jazzyweb/MapBundle" />
       <recent name="$PROJECT_DIR$/src/Jazzyweb/Geo" />
     </key>
@@ -602,7 +667,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="205" y="197" width="1597" height="969" extended-state="0" />
+    <frame x="205" y="225" width="1597" height="969" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -625,6 +690,27 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27659574" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997555" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -643,38 +729,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/egeloen/google-map-bundle/Ivory/GoogleMapBundle/Twig/GoogleMapExtension.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1590" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="108" selection-start="553" selection-end="553" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="390" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="70" selection-start="941" selection-end="941" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="630" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="25" selection-start="369" selection-end="369" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="300" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1320">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/egeloen/google-map-bundle/Ivory/GoogleMapBundle/UPGRADE.md">
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
@@ -690,7 +744,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="108" selection-start="553" selection-end="553" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="390" />
+        <state line="12" column="108" selection-start="553" selection-end="553" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="390">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
@@ -734,11 +790,6 @@
     <entry file="file://$PROJECT_DIR$/vendor/egeloen/google-map-bundle/Ivory/GoogleMapBundle/Twig/GoogleMapExtension.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1590" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="108" selection-start="553" selection-end="553" vertical-scroll-proportion="0.22727273" vertical-offset="0" max-vertical-offset="792" />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_5.php">
@@ -797,13 +848,6 @@
         <state line="21" column="29" selection-start="988" selection-end="1005" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1110" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Jazzyweb/MapBundle/Resources/config/routing.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="56" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/Yaml/Yaml.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="92" column="27" selection-start="3072" selection-end="3072" vertical-scroll-proportion="0.7348485" vertical-offset="693" max-vertical-offset="1485">
@@ -856,20 +900,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Jazzyweb/MapBundle/Command/CSV2YamlCommand.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="34" selection-start="1774" selection-end="1774" vertical-scroll-proportion="-14.958333" vertical-offset="361" max-vertical-offset="1125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="9" selection-start="1645" selection-end="1645" vertical-scroll-proportion="0.0" vertical-offset="529" max-vertical-offset="1335">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="30" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
@@ -898,27 +928,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Jazzyweb/MapBundle/Resources/config/services.xml">
+    <entry file="file://$PROJECT_DIR$/src/Jazzyweb/Geo/AddressToLonLat.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="77" selection-start="1259" selection-end="1259" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+        <state line="13" column="122" selection-start="308" selection-end="378" vertical-scroll-proportion="-5.375" vertical-offset="66" max-vertical-offset="870">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Jazzyweb/MapBundle/Entity/CentroMarkerRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="12" selection-start="229" selection-end="229" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="750">
-          <folding>
-            <marker date="1401102536216" expanded="true" signature="413:487" placeholder="SELECT c FRO..JwMapBundle..." />
-            <marker date="1401102536216" expanded="true" signature="729:803" placeholder="SELECT c FRO..JwMapBundle..." />
-            <marker date="1401102536216" expanded="true" signature="1045:1119" placeholder="SELECT c FRO..JwMapBundle..." />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/Vagrantfile">
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Jazzyweb/MapBundle/Controller/MapController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="8" selection-start="807" selection-end="807" vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="585">
+        <state line="7" column="0" selection-start="276" selection-end="276" vertical-scroll-proportion="0.13833992" vertical-offset="0" max-vertical-offset="759">
           <folding />
         </state>
       </provider>
@@ -927,40 +949,128 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="46" selection-start="1499" selection-end="1499" vertical-scroll-proportion="-23.75" vertical-offset="90" max-vertical-offset="870">
           <folding>
-            <element signature="e#38#76#0" expanded="true" />
+            <element signature="e#38#76#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Jazzyweb/MapBundle/Resources/views/Default/index.html.twig">
+    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="23" selection-start="1175" selection-end="1175" vertical-scroll-proportion="-19.375" vertical-offset="0" max-vertical-offset="1215">
+        <state line="34" column="35" selection-start="982" selection-end="982" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Jazzyweb/Geo/AddressToLonLat.php">
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="122" selection-start="308" selection-end="378" vertical-scroll-proportion="-5.375" vertical-offset="66" max-vertical-offset="870">
+        <state line="15" column="13" selection-start="258" selection-end="258" vertical-scroll-proportion="0.28553298" vertical-offset="0" max-vertical-offset="1335">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Jazzyweb/MapBundle/Entity/CentroMarker.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="202" column="84" selection-start="2782" selection-end="2782" vertical-scroll-proportion="-26.64" vertical-offset="1698" max-vertical-offset="7680">
+        <state line="214" column="49" selection-start="3151" selection-end="3151" vertical-scroll-proportion="-23.0" vertical-offset="2658" max-vertical-offset="7890">
           <folding>
-            <element signature="e#45#77#0" expanded="true" />
+            <element signature="e#45#77#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Jazzyweb/MapBundle/Command/CSV2YamlCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="34" selection-start="1774" selection-end="1774" vertical-scroll-proportion="-15.958333" vertical-offset="337" max-vertical-offset="1125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/ObjectManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="10" selection-start="1275" selection-end="1275" vertical-scroll-proportion="0.2638701" vertical-offset="0" max-vertical-offset="2385">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Jazzyweb/MapBundle/Resources/config/services.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="84" selection-start="1460" selection-end="1460" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Jazzyweb/MapBundle/Entity/CentroMarkerRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="48" selection-start="293" selection-end="321" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="750">
+          <folding>
+            <marker date="1401102536216" expanded="true" signature="413:487" placeholder="SELECT c FRO..JwMapBundle..." />
+            <marker date="1401102536216" expanded="true" signature="729:803" placeholder="SELECT c FRO..JwMapBundle..." />
+            <marker date="1401102536216" expanded="true" signature="1045:1119" placeholder="SELECT c FRO..JwMapBundle..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Jazzyweb/MapBundle/Form/ProvinciasList.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="164" column="5" selection-start="5119" selection-end="5119" vertical-scroll-proportion="-102.5" vertical-offset="0" max-vertical-offset="2595">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Jazzyweb/MapBundle/Command/CSV2DatabaseCommand.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="69" selection-start="4696" selection-end="4696" vertical-scroll-proportion="0.957204" vertical-offset="919" max-vertical-offset="1890">
+        <state line="77" column="127" selection-start="3364" selection-end="3364" vertical-scroll-proportion="-14.208333" vertical-offset="814" max-vertical-offset="1890">
           <folding>
             <element signature="e#45#78#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Jazzyweb/MapBundle/Form/Type/SelectProvinciaType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="46" selection-start="528" selection-end="528" vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="480">
+          <folding>
+            <element signature="e#48#88#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="108" selection-start="453" selection-end="553" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="390">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Jazzyweb/MapBundle/Controller/MapController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="22" selection-start="1521" selection-end="1521" vertical-scroll-proportion="-20.375" vertical-offset="186" max-vertical-offset="1440">
+          <folding>
+            <element signature="e#49#102#0" expanded="true" />
+            <marker date="1401122481415" expanded="true" signature="1333:1404" placeholder="SELECT disti..centros..." />
+            <marker date="1401122481415" expanded="true" signature="2113:2184" placeholder="SELECT disti..centros..." />
+            <marker date="1401122481415" expanded="true" signature="2630:2701" placeholder="SELECT disti..centros..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Jazzyweb/MapBundle/Resources/public/css/input.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="23" selection-start="948" selection-end="948" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Jazzyweb/MapBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="40" selection-start="2724" selection-end="2724" vertical-scroll-proportion="-25.0" vertical-offset="675" max-vertical-offset="1620">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Jazzyweb/MapBundle/Resources/config/routing.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="36" selection-start="952" selection-end="952" vertical-scroll-proportion="0.43250328" vertical-offset="0" max-vertical-offset="763">
+          <folding />
         </state>
       </provider>
     </entry>

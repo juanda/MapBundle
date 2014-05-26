@@ -2,55 +2,50 @@
 
 {% block body %}
 
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Project name</a>
-            </div>
 
-        </div>
-    </div>
 
     <div class="container">
 
+        <div class="row">
+            <h1 class="text-center">Centros Educativos</h1>
+        </div>
 
+        {% if map.markersWithoutLonLat != 0 %}
+            <div class="alert alert-warning alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <strong>Atención</strong> {{ map.markersWithoutLonLat }} centros sin coordenadas!
+            </div>
 
-        <div class="starter-template">
-            <h1>Red de historias de no se qué</h1>
-            {% if map.markersWithoutLonLat != 0 %}
-                <div class="alert alert-warning alert-dismissable">
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                    <strong>Atención</strong> {{ map.markersWithoutLonLat }} centros sin coordenadas!
-                </div>
+        {% endif %}
 
-            {% endif %}
+        <div class="row">
+            <div id="scrollable-dropdown-menu">
+                <form id="provinciaForm" action="#" method="get">
+                    <label for="provincia">Provincia: </label>
+                    <input  class="typeahead" type="text" placeholder="Buscar ..." id="provincia">
+                    <button id="btnBuscar">buscar</button>
+                </form>
 
+            </div>
+            </p>
+        </div>
+
+        <div class="row">
             <div class="panel panel-default">
                 <div class="panel-body">
                     {{ google_map_container(map) }}
                 </div>
             </div>
-
-
         </div>
 
     </div><!-- /.container -->
-
-
-
-
 
 
 {% endblock %}
 
 
 {% block javascripts %}
+    {{ parent() }}
     {{ google_map_js(map) }}
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -58,18 +53,50 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+    <script src="http://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
+
+    <script>
+
+        var provincias = new Bloodhound({
+            datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
+            queryTokenizer: Bloodhound.tokenizers.whitespace,
+
+            remote: '{{ url('jw_map_provincias') }}?term=%QUERY'
+        });
+
+        provincias.initialize();
+
+        $('#provincia').typeahead(null, {
+            name: 'provincias',
+            displayKey: 'provincia',
+            source: provincias.ttAdapter()
+        });
+        console.log($("#provincia"));
+        $("#btnBuscar").click(function(){
+
+            var provincia = $("#provincia").val();
+
+            $("#provinciaForm").attr('action', '{{ url('jw_map_all') }}' + 'provincia/' + provincia );
+            $("#provinciaForm").submit();
+        });
+
+        $("#provincia").keypress(function(key){
+            if ( event.which == 13 ) {
+                $("#btnBuscar").click();
+            }
+        });
+    </script>
+
 {% endblock %}
 
 {% block stylesheets %}
-    <style>
-        body {
-            padding-top: 50px;
-        }
-        .starter-template {
-            padding: 40px 15px;
-            text-align: center;
-        }
-    </style>
+    {{ parent() }}
+
+    <link rel="stylesheet" href="{{ asset('bundles/jwmap/css/input.css') }}">
+
+
     {{ google_map_css(map) }}
 {% endblock %}
 
+{% block title %}Red de centros{% endblock %}

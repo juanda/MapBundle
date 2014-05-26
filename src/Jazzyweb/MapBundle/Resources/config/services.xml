@@ -28,6 +28,10 @@
             <argument type="service" id="doctrine.orm.entity_manager" />
         </service>
 
+        <service id="jw_map.form.autocomplete_entity_type" class="Jazzyweb\MapBundle\Form\Type\AutocompleteEntityType">
+            <argument type="service" id="doctrine.orm.entity_manager"/>
+            <tag name="form.type" alias="autocomplete_entity" />
+        </service>
 
     </services>
 

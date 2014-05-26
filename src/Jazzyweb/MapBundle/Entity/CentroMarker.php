@@ -200,7 +200,21 @@ class CentroMarker implements  MarkerInterface
      */
     public function getContent()
     {
-        $content = $this->content? $this->content : '<h3>Cod: '. $this-> getCodigo(). '</h3>';
+        $content = $this->content? $this->content :
+            '<table>
+                <tr>
+                    <td>Cod: '. $this-> getCodigo(). '</td>
+                </tr>
+                <tr>
+                    <td>' . $this->getDenoEspecial() . '</td>
+                </tr>
+                <tr>
+                    <td>' . $this->getLocalidad() . '</td>
+                </tr>
+                <tr>
+                    <td>' . $this->getProvincia() . '</td>
+                </tr>
+            </table>';
 
         return $content;
     }
