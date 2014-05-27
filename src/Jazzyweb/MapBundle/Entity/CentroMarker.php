@@ -215,7 +215,16 @@ class CentroMarker implements  MarkerInterface
                     <td>Provincia: </td><td>' . $this->getProvincia() . '</td>
                 </tr>
                 <tr>
-                    <td>Num Alumnos: </td><td>' . $this->getNumAlumnos() . '</td>
+                    <td>Num Alums: </td><td>' . $this->getNumAlumnos() . '</td>
+                </tr>
+                <tr>
+                    <td>Tipo Edu.: </td><td>' . $this->getTipoEducacion() . '</td>
+                </tr>
+                <tr>
+                    <td>Naturaleza: </td><td>' . $this->getNaturaleza() . '</td>
+                </tr>
+                <tr>
+                    <td>Tipología: </td><td>' . $this->getTipologiaMod18may() . '</td>
                 </tr>
                  <tr>
                     <td>Teléfono: </td><td>' . $this->getTelefono() . '</td>

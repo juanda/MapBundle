@@ -1,0 +1,41 @@
+#production
+#production
+deployment:
+  strategy: targz
+  user: root
+  from: ./
+  to: /nfs-netapp/mercurio/red_centros
+  excludes:
+    - app/cache/*
+    - app/logs/*
+    - app/config/parameters.yml
+    - .mage
+    - mage
+    - .idea
+    - nbproject
+    - Vagrantfile
+    - VagrantProvision
+    - BD_Conectividad_Tipo2.*
+    - BD_Conectividad_Tipo2.csv
+  #scm:
+  #  branch: master
+releases:
+  enabled: true
+  max: 5
+  symlink: current
+  directory: releases
+hosts:
+  - mercurio-11
+tasks:
+  pre-deploy:
+    - symfony2/cache-clear
+
+  on-deploy:
+
+  post-release:
+    - permissions
+    - copyConfigProd
+    - clearCache
+    - symfony2/assets-install
+
+  post-deploy:
