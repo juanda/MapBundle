@@ -7,35 +7,48 @@ use Ivory\GoogleMap\Map;
 use Ivory\GoogleMapBundle\Model\MapBuilder;
 use Ivory\GoogleMapBundle\Model\Overlays\InfoWindowBuilder;
 use Ivory\GoogleMapBundle\Model\Overlays\MarkerBuilder;
+use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Component\Routing\RouterInterface;
 
 class GoogleMapBuilder {
 
     protected $mapBuilder;
     protected $markerBuilder;
     protected $infoWindowBuilder;
+    protected $requestStack;
     protected $coordTable;
 
-    public function __construct(MapBuilder $mapBuilder, MarkerBuilder $markerBuilder, InfoWindowBuilder $infoWindowBuilder){
+    public function __construct(MapBuilder $mapBuilder, MarkerBuilder $markerBuilder, InfoWindowBuilder $infoWindowBuilder, RequestStack $requestStack){
         $this->mapBuilder = $mapBuilder;
         $this->markerBuilder = $markerBuilder;
         $this->infoWindowBuilder = $infoWindowBuilder;
+        $this->requestStack = $requestStack;
         $this->coordTable = array();
     }
 
-    public function build(array $jwMarkers){
+    public function build(array $jwMarkers, $filter = null){
 
         $map = $this->mapBuilder->build();
         $map->markersWithoutLonLat = 0;
-        $map->totalMarkers = count($jwMarkers);
+        $map->totalMarkers = 0;
+
+        if(is_null($filter)){
+            $filter = function($m) {return true;};
+        }
+
+        $request = $this->requestStack->getCurrentRequest();
 
         $coordTable = array();
 
         foreach($jwMarkers as $m){
 
+            if(!$filter($m)) continue;
+
             if(!$m instanceof MarkerInterface){
                 throw new \Exception('element must implement MarkerInterface');
             }
 
+            $map->totalMarkers ++;
             $marker = $this->markerBuilder->build();
 
             if(is_null($m->getLon()) || is_null($m->getLat())){
@@ -48,10 +61,9 @@ class GoogleMapBuilder {
                 $marker->setPosition($m->getLat(), $m->getLon());
                 $infoWindow  = $this->infoWindowBuilder->build();
                 $infoWindow->setOpenEvent(MouseEvent::CLICK);
-
                 $infoWindow->setContent($content);
-
                 $marker->setInfoWindow($infoWindow);
+                $marker->setIcon(str_replace('/app_dev.php', '', $request->getUriForPath($m->getIcon())));
 
                 $map->addMarker($marker);
             }

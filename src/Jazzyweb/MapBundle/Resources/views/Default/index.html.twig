@@ -13,40 +13,41 @@
         <br/>
 
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-9">
                 <div class="center-block">
                     <form class="form-inline"  id="busquedaForm" action="#" method="get">
                         <div class="form-group">
                             <input  class="form-control typeahead" type="text" placeholder="Autonomía ..." id="autonomia">
                         </div>
                         <div class="form-group">
-                            <input  class="form-control typeahead" type="text" placeholder="Provincia ..." id="provincia">
+                            <input  class="form-control typeahead" type="text" placeholder="Provincia ..." id="provincia" >
                         </div>
                         <div class="form-group">
-                            <input  class="form-control typeahead" type="text" placeholder="Localidad ..." id="localidad">
+                            <input  class="form-control typeahead" type="text" placeholder="Localidad ..." id="localidad" >
                         </div>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="chkTipo1" value="TIPO 1" checked="true"> 1
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="chkTipo2" value="TIPO 2" checked="true"> 2
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="chkTipo3" value="TIPO 3" checked="true"> 3
+                        </label>
+
                         <button id="btnBuscar">buscar</button>
                     </form>
                 </div>
             </div>
-
-            <div class="col-md-4">
-                {% if map.totalMarkers != 0 %}
-                    <span class="label label-success">Centros</span> <span class="badge">{{ map.totalMarkers }}</span>
-                {% endif %}
-                {% if map.markersWithoutLonLat != 0 %}
-                    <span class="label label-danger">Centros sin coordenadas</span> <span class="badge">{{ map.markersWithoutLonLat }}</span>
-                {% endif %}
-            </div>
-
         </div>
 
-        <br/>
-
-        <div class="row">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    {{ google_map_container(map) }}
+        <hr/>
+        <div id="map_container">
+            <div class="row">
+                <div class="panel panel-default">
+                    <div id="map" class="panel-body">
+                        {{ google_map_container(map) }}
+                    </div>
                 </div>
             </div>
         </div>
@@ -122,6 +123,10 @@
             var provincia = $("#provincia").val();
             var localidad = $("#localidad").val();
 
+            var tipo = $("#chkTipo1").is(':checked')? 'TIPO 1,' : '';
+            tipo += $("#chkTipo2").is(':checked')? 'TIPO 2,' : '';
+            tipo += $("#chkTipo3").is(':checked')? 'TIPO 3,' : '';
+
             var query = "";
 
             if(autonomia != ""){
@@ -130,12 +135,18 @@
                 query = "provincia" + '/' + provincia;
             }else if(localidad != ""){
                 query = "localidad" + '/' + localidad;
+            }else{ // Todos los campos vacios
+                return
             }
 
-            console.log(query);
+            query = (tipo == '') ? query : query + '?tipo=' + tipo;
 
-            $("#busquedaForm").attr('action', '{{ url('jw_map_all') }}' + query );
-            $("#busquedaForm").submit();
+            $.get('{{ url('jw_map_search') }}' + query, function(data){
+                $('#map_container').html(data);
+            });
+
+            {#$("#busquedaForm").attr('action', '{{ url('jw_map_all') }}' + query );#}
+            {#$("#busquedaForm").submit();#}
         });
 
         $("#autonomia").focus(function(){

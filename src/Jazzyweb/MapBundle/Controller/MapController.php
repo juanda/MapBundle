@@ -4,14 +4,26 @@ namespace Jazzyweb\MapBundle\Controller;
 
 use Jazzyweb\MapBundle\Centroid;
 use Jazzyweb\MapBundle\Form\Type\SelectProvinciaType;
+use Jazzyweb\MapBundle\MarkerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
 class MapController extends Controller
 {
-    public function indexAction($agrupacion, $nombre)
+    public function indexAction(Request $request)
     {
+        $mapBuilder = $this->get('jw_map.builder');
+        $map = $mapBuilder->build(array());
+
+        return $this->render('JwMapBundle:Default:index.html.twig', array('map' => $map));
+    }
+
+    public function searchAction(Request $request){
+        $agrupacion = $request->get('agrupacion');
+        $nombre = $request->get('nombre');
+        $tipo = $request->query->get('tipo');
+
         $markerManager = $this->get('jw_map.doctrine_marker_manager');
 
         switch($agrupacion){
@@ -39,7 +51,11 @@ class MapController extends Controller
 //        var_dump($markers);exit;
         $mapBuilder = $this->get('jw_map.builder');
 
-        $map = $mapBuilder->build($markers);
+        // Esto devuelve una función que se construye a partir del parámetro $tipo
+        // y que sirve como base de filtro a la función build del mapBuilder
+        $filter = $this->filter($tipo);
+
+        $map = $mapBuilder->build($markers, $filter);
 
         $centroid = new \Jazzyweb\Geo\Centroid();
         list($lon, $lat) = $centroid->get($markers);
@@ -47,7 +63,19 @@ class MapController extends Controller
         $map->setCenter($lat, $lon, true);
         $map->setMapOption('zoom', $scale);
 
-        return $this->render('JwMapBundle:Default:index.html.twig', array('map' => $map));
+        return $this->render('JwMapBundle:Default:map.html.twig', array('map' => $map, 'agrupacion' => $agrupacion, 'nombre' => $nombre));
+    }
+
+    protected function filter($tipo){
+
+        $tipoArr = explode(",", $tipo);
+
+        $f = function($m) use ($tipoArr){
+            return in_array($m->getTipologiaMod18may(), $tipoArr);
+        };
+
+        return $f;
+
     }
 
     protected function getAgrupacion($tipo, $term){

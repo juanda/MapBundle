@@ -16,6 +16,7 @@
             <argument type="service" id="ivory_google_map.map.builder"></argument>
             <argument type="service" id="ivory_google_map.marker.builder"></argument>
             <argument type="service" id="ivory_google_map.info_window.builder"></argument>
+            <argument type="service" id="request_stack"></argument>
         </service>
 
         <!--

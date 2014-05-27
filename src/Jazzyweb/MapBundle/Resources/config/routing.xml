@@ -16,10 +16,14 @@
         <default key="_controller">JwMapBundle:Map:localidades</default>
     </route>
 
-    <route id="jw_map_all" pattern="/{agrupacion}/{nombre}">
+    <route id="jw_map_home" pattern="/">
+        <default key="_controller">JwMapBundle:Map:index</default>
+    </route>
+
+    <route id="jw_map_search" pattern="/{agrupacion}/{nombre}">
         <default key="agrupacion">false</default>
         <default key="nombre">false</default>
-        <default key="_controller">JwMapBundle:Map:index</default>
+        <default key="_controller">JwMapBundle:Map:search</default>
         <requirement key="nombre">.+</requirement>
     </route>
 

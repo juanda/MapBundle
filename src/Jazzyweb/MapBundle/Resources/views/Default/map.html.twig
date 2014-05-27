@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-md-3">
+        {% if map.totalMarkers != 0 %}
+            <span class="label label-success">Centros</span> <span class="badge">{{ map.totalMarkers }}</span>
+        {% endif %}
+        {% if map.markersWithoutLonLat != 0 %}
+            <span class="label label-danger">Centros sin coordenadas</span> <span class="badge">{{ map.markersWithoutLonLat }}</span>
+        {% endif %}
+    </div>
+</div>
+
+<br/>
+
+<div class="row">
+    <div class="panel panel-default">
+        <div id="map" class="panel-body">
+            {{ google_map_container(map) }}
+        </div>
+    </div>
+</div>
+
+{{ google_map_js(map) }}

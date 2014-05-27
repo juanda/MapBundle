@@ -4,6 +4,8 @@ namespace Jazzyweb\MapBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Jazzyweb\MapBundle\MarkerInterface;
+use Symfony\Component\BrowserKit\Request;
+use Symfony\Component\HttpFoundation\RequestStack;
 
 /**
  * CentrosMarker
@@ -29,6 +31,11 @@ class CentroMarker implements  MarkerInterface
      * @var float
      */
     private $lat;
+
+    /**
+     * @var float
+     */
+    private $icon;
 
     /**
      * @var string
@@ -100,6 +107,7 @@ class CentroMarker implements  MarkerInterface
      */
     private $tipologiaMod18may;
 
+    private $requestStack;
 
     /**
      * Get id
@@ -109,6 +117,10 @@ class CentroMarker implements  MarkerInterface
     public function getId()
     {
         return $this->id;
+    }
+
+    public function __construct(){
+        $this->icon = 'http://maps.gstatic.com/mapfiles/markers/marker.png';
     }
 
     /**
@@ -532,4 +544,30 @@ class CentroMarker implements  MarkerInterface
     {
         return $this->tipologiaMod18may;
     }
+
+    public function getIcon()
+    {
+        $tipo = $this->getTipologiaMod18may();
+
+        switch($tipo){
+            case 'TIPO 1':
+                $this->icon = '/bundles/jwmap/img/school_blue.png';
+                break;
+            case 'TIPO 2':
+                $this->icon = '/bundles/jwmap/img/school_red.png';
+                break;
+            case 'TIPO 3':
+                $this->icon = '/bundles/jwmap/img/school_green.png';
+                break;
+
+        }
+       return $this->icon;
+    }
+
+    public function setIcon($icon){
+
+        $this->icon = $icon;
+    }
+
+
 }

@@ -8,4 +8,5 @@ interface MarkerInterface {
     public function getLat();
     public function getContent();
     public function getAddress();
+    public function getIcon();
 } 

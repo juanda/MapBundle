@@ -41,4 +41,41 @@ class CentroMarkerRepository extends EntityRepository
             ->setParameter('localidad', '%'.$localidad.'%')
             ->getResult();
     }
+
+    public function findPorProvinciaYTipo($provincia, $tipo)
+    {
+        return $this->getEntityManager()
+            ->createQuery(
+                'SELECT c FROM JwMapBundle:CentroMarker c WHERE c.provincia LIKE :provincia and c.tipologiaMod18may = :tipo'
+            )
+            ->setParameters(array('provincia' => '%'.$provincia.'%', 'tipo' => $tipo))
+            ->getResult();
+    }
+
+    public function findPorAutonomiaYTipo($autonomia, $tipo)
+    {
+        return $this->getEntityManager()
+            ->createQuery(
+                'SELECT c FROM JwMapBundle:CentroMarker c WHERE c.autonomia LIKE :autonomia'
+            )
+            ->setParameters(array('autonomia' => '%'.$autonomia.'%', 'tipo' => $tipo))
+            ->getResult();
+    }
+
+    public function findPorLocalidadYTipo($localidad, $tipo)
+    {
+        return $this->getEntityManager()
+            ->createQuery(
+                'SELECT c FROM JwMapBundle:CentroMarker c WHERE c.localidad LIKE :localidad'
+            )
+            ->setParameters(array('provincia' => '%'.$localidad.'%', 'tipo' => $tipo))
+            ->getResult();
+    }
+
+    protected function getTipo($tipo){
+
+        $tipos = array('TIPO 1', 'TIPO 2', 'TIPO 3');
+
+
+    }
 }
