@@ -25,7 +25,7 @@ class MapController extends Controller
                 break;
             case 'localidad':
                 $markers = $markerManager->getAllByLocalidad($nombre);
-                $scale = 11;
+                $scale = 10;
                 break;
             case 'all':
                 $markers = $markerManager->getAll();
@@ -41,7 +41,7 @@ class MapController extends Controller
 
         $map = $mapBuilder->build($markers);
 
-        $centroid = new Centroid();
+        $centroid = new \Jazzyweb\Geo\Centroid();
         list($lon, $lat) = $centroid->get($markers);
 
         $map->setCenter($lat, $lon, true);
