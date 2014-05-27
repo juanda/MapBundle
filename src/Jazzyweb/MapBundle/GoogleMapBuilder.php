@@ -24,6 +24,7 @@ class GoogleMapBuilder {
 
         $map = $this->mapBuilder->build();
         $map->markersWithoutLonLat = 0;
+        $map->totalMarkers = count($jwMarkers);
 
         foreach($jwMarkers as $m){
 
@@ -44,8 +45,6 @@ class GoogleMapBuilder {
             }else{
                 $map->markersWithoutLonLat ++;
             }
-
-
         }
 
         return $map;

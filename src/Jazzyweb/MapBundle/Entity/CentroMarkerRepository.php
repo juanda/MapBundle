@@ -18,7 +18,7 @@ class CentroMarkerRepository extends EntityRepository
             ->createQuery(
                 'SELECT c FROM JwMapBundle:CentroMarker c WHERE c.provincia LIKE :provincia'
             )
-            ->setParameter('provincia', $provincia)
+            ->setParameter('provincia', '%'.$provincia.'%')
             ->getResult();
     }
 
@@ -28,7 +28,7 @@ class CentroMarkerRepository extends EntityRepository
             ->createQuery(
                 'SELECT c FROM JwMapBundle:CentroMarker c WHERE c.autonomia LIKE :autonomia'
             )
-            ->setParameter('autonomia', $autonomia)
+            ->setParameter('autonomia', '%'.$autonomia.'%')
             ->getResult();
     }
 
@@ -38,7 +38,7 @@ class CentroMarkerRepository extends EntityRepository
             ->createQuery(
                 'SELECT c FROM JwMapBundle:CentroMarker c WHERE c.localidad LIKE :localidad'
             )
-            ->setParameter('localidad', $localidad)
+            ->setParameter('localidad', '%'.$localidad.'%')
             ->getResult();
     }
 }

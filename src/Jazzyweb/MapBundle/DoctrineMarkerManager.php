@@ -30,7 +30,7 @@ class DoctrineMarkerManager implements  MarkerManagerInterface {
 
     public function getAllByAutonomia($autonomia)
     {
-        $centros = $this->repoCentros->findPorProvincia($autonomia);
+        $centros = $this->repoCentros->findPorAutonomia($autonomia);
 
         return $centros;
     }

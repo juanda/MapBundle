@@ -203,16 +203,22 @@ class CentroMarker implements  MarkerInterface
         $content = $this->content? $this->content :
             '<table>
                 <tr>
-                    <td>Cod: '. $this-> getCodigo(). '</td>
+                    <td>Cod</td><td>'. $this-> getCodigo(). '</td>
                 </tr>
                 <tr>
-                    <td>' . $this->getDenoEspecial() . '</td>
+                    <td>Denom: </td><td>' . $this->getDenoEspecial() . '</td>
                 </tr>
                 <tr>
-                    <td>' . $this->getLocalidad() . '</td>
+                    <td>Localidad: </td><td>' . $this->getLocalidad() . '</td>
                 </tr>
                 <tr>
-                    <td>' . $this->getProvincia() . '</td>
+                    <td>Provincia: </td><td>' . $this->getProvincia() . '</td>
+                </tr>
+                <tr>
+                    <td>Num Alumnos: </td><td>' . $this->getNumAlumnos() . '</td>
+                </tr>
+                 <tr>
+                    <td>Teléfono: </td><td>' . $this->getTelefono() . '</td>
                 </tr>
             </table>';
 

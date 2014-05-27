@@ -5,7 +5,7 @@ imports:
 
 ivory_google_map:
     map:
-      width: "1075px"
+      width: "1125px"
       height: "600px"
 
       center:

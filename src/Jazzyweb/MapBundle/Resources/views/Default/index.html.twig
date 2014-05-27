@@ -10,25 +10,38 @@
             <h1 class="text-center">Centros Educativos</h1>
         </div>
 
-        {% if map.markersWithoutLonLat != 0 %}
-            <div class="alert alert-warning alert-dismissable">
-                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                <strong>Atención</strong> {{ map.markersWithoutLonLat }} centros sin coordenadas!
-            </div>
-
-        {% endif %}
+        <br/>
 
         <div class="row">
-            <div id="scrollable-dropdown-menu">
-                <form id="provinciaForm" action="#" method="get">
-                    <label for="provincia">Provincia: </label>
-                    <input  class="typeahead" type="text" placeholder="Buscar ..." id="provincia">
-                    <button id="btnBuscar">buscar</button>
-                </form>
-
+            <div class="col-md-8">
+                <div class="center-block">
+                    <form class="form-inline"  id="busquedaForm" action="#" method="get">
+                        <div class="form-group">
+                            <input  class="form-control typeahead" type="text" placeholder="Autonomía ..." id="autonomia">
+                        </div>
+                        <div class="form-group">
+                            <input  class="form-control typeahead" type="text" placeholder="Provincia ..." id="provincia">
+                        </div>
+                        <div class="form-group">
+                            <input  class="form-control typeahead" type="text" placeholder="Localidad ..." id="localidad">
+                        </div>
+                        <button id="btnBuscar">buscar</button>
+                    </form>
+                </div>
             </div>
-            </p>
+
+            <div class="col-md-4">
+                {% if map.totalMarkers != 0 %}
+                    <span class="label label-success">Centros</span> <span class="badge">{{ map.totalMarkers }}</span>
+                {% endif %}
+                {% if map.markersWithoutLonLat != 0 %}
+                    <span class="label label-danger">Centros sin coordenadas</span> <span class="badge">{{ map.markersWithoutLonLat }}</span>
+                {% endif %}
+            </div>
+
         </div>
+
+        <br/>
 
         <div class="row">
             <div class="panel panel-default">
@@ -72,19 +85,70 @@
             displayKey: 'provincia',
             source: provincias.ttAdapter()
         });
-        console.log($("#provincia"));
-        $("#btnBuscar").click(function(){
 
-            var provincia = $("#provincia").val();
+        var autonomias = new Bloodhound({
+            datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
+            queryTokenizer: Bloodhound.tokenizers.whitespace,
 
-            $("#provinciaForm").attr('action', '{{ url('jw_map_all') }}' + 'provincia/' + provincia );
-            $("#provinciaForm").submit();
+            remote: '{{ url('jw_map_autonomias') }}?term=%QUERY'
         });
 
-        $("#provincia").keypress(function(key){
-            if ( event.which == 13 ) {
-                $("#btnBuscar").click();
+        autonomias.initialize();
+
+        $('#autonomia').typeahead(null, {
+            name: 'autonomia',
+            displayKey: 'autonomia',
+            source: autonomias.ttAdapter()
+        });
+
+        var localidad = new Bloodhound({
+            datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
+            queryTokenizer: Bloodhound.tokenizers.whitespace,
+
+            remote: '{{ url('jw_map_localidades') }}?term=%QUERY'
+        });
+
+        localidad.initialize();
+
+        $('#localidad').typeahead(null, {
+            name: 'localidad',
+            displayKey: 'localidad',
+            source: localidad.ttAdapter()
+        });
+
+        $("#btnBuscar").click(function(){
+
+            var autonomia = $("#autonomia").val();
+            var provincia = $("#provincia").val();
+            var localidad = $("#localidad").val();
+
+            var query = "";
+
+            if(autonomia != ""){
+                query = "autonomia" + '/' + autonomia;
+            }else if(provincia != ""){
+                query = "provincia" + '/' + provincia;
+            }else if(localidad != ""){
+                query = "localidad" + '/' + localidad;
             }
+
+            console.log(query);
+
+            $("#busquedaForm").attr('action', '{{ url('jw_map_all') }}' + query );
+            $("#busquedaForm").submit();
+        });
+
+        $("#autonomia").focus(function(){
+            $("#localidad").val("");
+            $("#provincia").val("");
+        });
+        $("#provincia").focus(function(){
+            $("#localidad").val("");
+            $("#autonomia").val("");
+        });
+        $("#localidad").focus(function(){
+            $("#autonomia").val("");
+            $("#provincia").val("");
         });
     </script>
 
