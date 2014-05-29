@@ -44,6 +44,14 @@
         <hr/>
         <div id="map_container">
             <div class="row">
+                <div class="col-md-6">
+                    <div id="infopanel"></div>
+                </div>
+            </div>
+
+        <br/>
+        
+            <div class="row">
                 <div class="panel panel-default">
                     <div id="map" class="panel-body">
                         {{ google_map_container(map) }}
@@ -140,8 +148,10 @@
             }
 
             query = (tipo == '') ? query : query + '?tipo=' + tipo;
-
+            
+            $('#infopanel').html('Buscando centros ... <img src="{{asset('/bundles/jwmap/img/loader.gif')}}"/>');
             $.get('{{ url('jw_map_search') }}' + query, function(data){
+                $('#infopanel').html('');
                 $('#map_container').html(data);
             });
 
